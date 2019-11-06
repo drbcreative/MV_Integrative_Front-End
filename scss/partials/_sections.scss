@@ -1,3 +1,75 @@
 /* ************************************************************************** */
 /* Main Page Sections ******************************************************* */
 /* ************************************************************************** */
+.hero {
+  position: relative;
+
+  .hero--slider-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    z-index: 999;
+
+    @include isLarge {
+      padding: 0 1rem;
+    }
+
+    @include isXLarge {
+      padding: 0 4rem;
+    }
+
+    @include isGiant {
+      padding: 0 8rem;
+    }
+
+    img {
+      width: 25.2px;
+      height: 36.8px;
+    }
+  }
+
+  .hero--slider {
+
+    .hero--slide {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 90vh;
+      padding: 0 20px;
+
+      @include isMedium {
+        height: 768px;
+      }
+
+      @include isGiant {
+        height: 900px;
+      }
+
+      .slide-info {
+        padding: 2rem;
+        text-align: center;
+        background: rgba($color-dark, .5);
+        max-width: 865px;
+
+        @include isLarge {
+          padding: 2rem 6rem;
+        }
+      }
+
+      &.slide-1 {
+        background: url('../../images/hero-slide-1@2x.jpg') center / cover;
+      }
+
+      &.slide-2 {
+        background: url('../../images/hero-slide-1@2x.jpg') center / cover;
+      }
+
+      &.slide-3 {
+        background: url('../../images/hero-slide-1@2x.jpg') center / cover;
+      }
+    }
+  }
+}

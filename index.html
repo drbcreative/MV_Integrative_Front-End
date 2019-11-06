@@ -115,9 +115,57 @@
 
   <!-- main -->
   <main>
-
+    <!-- hero -->
+    <section class="hero">
+      <div class="hero--slider-nav">
+        <img src="images/arrow-left.svg" alt="" class="hero--slider-nav-arrow-left">
+        <img src="images/arrow-right.svg" alt="" class="hero--slider-nav-arrow-right">
+      </div>
+      <div class="hero--slider">
+        <!-- slide 1 -->
+        <div class="hero--slide slide-1">
+          <div class="slide-info">
+            <h1 class="color-white">Welcome to MV Integrative</h1>
+            <p class="lead-copy color-white mt-3 mb-4">
+              MV Integrative is dedicated to inner and outer healing. Your body is capable of amazing things, visit us
+              today to unlock your full potential and return to balance.
+            </p>
+            <a href="#" class="ui-btn ui-btn-white-ol">LEARN MORE</a>
+          </div>
+        </div>
+        <!-- /slide 1 -->
+        <!-- slide 2 -->
+        <div class="hero--slide slide-2">
+          <div class="slide-info">
+            <h1 class="color-white">Welcome to MV Integrative</h1>
+            <p class="lead-copy color-white mt-3 mb-4">
+              MV Integrative is dedicated to inner and outer healing. Your body is capable of amazing things,
+              visit us
+              today to unlock your full potential and return to balance.
+            </p>
+            <a href="#" class="ui-btn ui-btn-white-ol">LEARN MORE</a>
+          </div>
+        </div>
+        <!-- /slide 2 -->
+        <!-- slide 3 -->
+        <div class="hero--slide slide-3">
+          <div class="slide-info">
+            <h1 class="color-white">Welcome to MV Integrative</h1>
+            <p class="lead-copy color-white mt-3 mb-4">
+              MV Integrative is dedicated to inner and outer healing. Your body is capable of amazing things,
+              visit us
+              today to unlock your full potential and return to balance.
+            </p>
+            <a href="#" class="ui-btn ui-btn-white-ol">LEARN MORE</a>
+          </div>
+        </div>
+        <!-- /slide 3 -->
+      </div>
+    </section>
+    <!-- /hero -->
   </main>
   <!-- /main -->
+
 
   <!-- footer -->
   <footer>
@@ -153,17 +201,17 @@
   <script src="js/vendor/jquery.min.js"></script>
   <script src="js/vendor/bootstrap.bundle.min.js"></script>
   <script src="slick/slick.min.js"></script>
-  <script src="js/app.min.js"></script>
+  <!-- <script src="js/app.min.js"></script> -->
 
-  <!-- <script>
+  <script>
     $(document).ready(function () {
-      $('.slide-show').slick({
+      $('.hero--slider').slick({
         dots: true,
-        prevArrow: $('.arrow-left'),
-        nextArrow: $('.arrow-right')
+        prevArrow: $('.hero--slider-nav-arrow-left'),
+        nextArrow: $('.hero--slider-nav-arrow-right')
       });
     });
-  </script> -->
+  </script>
 </body>
 
 </html>
