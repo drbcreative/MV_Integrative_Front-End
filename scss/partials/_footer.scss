@@ -1,0 +1,103 @@
+/* ************************************************************************** */
+/* FOOTER Sections ********************************************************** */
+/* ************************************************************************** */
+
+/* footer 1 ***************************************************************** */
+.footer-1 {
+  display: grid;
+
+  @include isLarge {
+    grid-template-columns: 1fr 1.5fr;
+  }
+
+  .footer-left {
+    background: url('../images/footer-left-bg@2x.jpg') center / cover;
+    padding: 40px 20px;
+
+    @include isLarge {
+      padding: 4rem;
+    }
+
+    .section-info {
+      .newsletter {
+        input {
+          width: 100%;
+          height: 45px;
+          margin-bottom: .5rem;
+          padding-left: .5rem;
+
+          @include isLarge {
+            width: 255px;
+            display: block;
+            margin-bottom: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-right {
+    padding: 40px 20px;
+    background: url('../images/footer-right-bg@2x.jpg') center / cover;
+
+    @include isLarge {
+      padding: 4rem;
+    }
+
+    .section-info {
+      display: grid;
+
+      .body-copy {
+        font-size: 1rem;
+      }
+
+      @include isMedium {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 2rem;
+      }
+
+      @include isLarge {
+        grid-template-columns: 1.5fr 1fr;
+        column-gap: 3rem;
+      }
+
+      .col-left {
+        //something
+      }
+
+      .col-right {
+        .footer-link-wrapper {
+          display: flex;
+          flex-direction: column;
+
+          .footer-nav-link:not(:last-child) {
+            margin-bottom: .5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* footer 2 ***************************************************************** */
+.footer2 {
+  background-color: $color-dark-accent;
+  width: 100%;
+  padding: 0.6rem 20px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  .containerish {
+    display: grid;
+    align-items: center;
+
+    .topbar-link:not(:last-child) {
+      margin-right: .5rem;
+    }
+
+    @include isMedium {
+      grid-template-columns: max-content 1fr;
+    }
+  }
+}

@@ -1,0 +1,72 @@
+/* ************************************************************************** */
+/* Links ******************************************************************** */
+/* ************************************************************************** */
+
+/* Topbar ******************************************************************* */
+.topbar-link {
+  font-family: $font-primary;
+  font-size: 0.8125rem;
+  // font-weight: 700;
+  color: $color-white;
+  @include linkFade;
+
+  &:hover {
+    color: $color-light-accent;
+    text-decoration: none;
+    @include linkFade;
+  }
+}
+
+/* Navbar ******************************************************************* */
+
+.nav-link {
+  font-family: $font-primary !important;
+  color: $color-dark-accent !important;
+  font-size: 1rem !important;
+  font-weight: 600;
+  @include linkFade;
+
+  &:hover {
+    color: $color-light-accent !important;
+    text-decoration: none;
+    @include linkFade;
+  }
+
+  @include isXLarge {
+    margin-right: 0;
+    padding: 0 !important;
+  }
+}
+
+/* General Page Links ******************************************************* */
+.gen-page-link {
+  @extend .body-copy;
+  color: $color-dark;
+
+  &:hover {
+    text-decoration: none;
+    color: $color-light-accent;
+  }
+}
+
+/* Footer Links ************************************************************* */
+.footer-nav-link {
+  font-size: 1rem; // 18px
+  line-height: calc(1rem * 1.5);
+  font-family: $font-primary;
+  color: $color-copy;
+
+  &:hover {
+    color: $color-main;
+    text-decoration: none;
+  }
+}
+
+.small-footer-link {
+  @extend .small-copy;
+  color: $color-white;
+
+  &:hover {
+    color: $color-main;
+  }
+}
