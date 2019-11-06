@@ -2,74 +2,53 @@
 /* Top Bar ****************************************************************** */
 /* ************************************************************************** */
 .topbar {
-  padding: 0.3rem 1rem;
-  background: $color-dark-accent;
+  display: none;
 
-  @include isRetina {
-    padding: .5rem 0;
+  .topbar-link:not(:last-child) {
+    margin-right: .5rem;
   }
 
-  .containerish {
+  .topbar-lead-copy {
+    font-family: $font-secondary;
+    font-size: 0.8125rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .col-middle {
+    justify-self: center;
+  }
+
+  .col-right {
+    display: flex;
+
+    .topbar-link:not(:last-child) {
+      margin-right: 1rem;
+    }
+  }
+
+  @include isMedium {
+    padding: 0 .5rem;
     display: grid;
-    grid-template-columns: max-content 1fr;
+    grid-template-columns: max-content 1fr max-content;
     align-items: center;
+    height: 30px;
+    width: 100%;
+    background: rgba($color-white, 1);
+  }
 
-    .col-left {
-      display: flex;
-      justify-content: space-between;
+  @include isXLarge {
+    padding: 0 .5rem;
+    grid-template-columns: max-content 1fr max-content;
+    align-items: center;
+    height: 30px;
+    width: 100%;
+    background: rgba($color-white, 1);
+  }
 
-      .topbar-link:not(:last-child) {
-        margin-right: .5rem;
-      }
-    }
+  @include isRetina {
+    padding: 0 2rem;
 
-    .col-middle {
-      display: none;
-
-      .topbar-lead-copy {
-        font-family: $font-primary;
-        font-size: 0.8125rem;
-        font-weight: 700;
-        margin: 0;
-      }
-    }
-
-    .col-right {
-      display: flex;
-      justify-content: flex-end;
-    }
-
-    @include isLarge {
-      grid-template-columns: 30px 1fr max-content;
-
-      .col-middle {
-        display: flex;
-        justify-content: center;
-      }
-
-      .col-right {
-        .topbar-link:not(:last-child) {
-          margin-right: .5rem;
-        }
-      }
-    }
-
-    @include isRetina {
-      .col-right {
-        .topbar-link:not(:last-child) {
-          margin-right: 1rem;
-        }
-      }
-    }
-
-    @include isXLarge {
-      grid-template-columns: max-content 1fr .5fr;
-      align-items: center;
-
-      .col-middle {
-        display: flex;
-        justify-content: flex-end;
-      }
-    }
   }
 }
