@@ -17,6 +17,14 @@
 		"oAP": "/.gitignore",
 		"oF": 0
 		},
+	"/about-us-backup.html": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/about-us-backup.html",
+		"oF": 0
+		},
 	"/assets/FONT LIST.txt": {
 		"cB": 0,
 		"ft": 8192,
@@ -58,6 +66,16 @@
 		"ma": 0,
 		"oA": 0,
 		"oAP": "/css/vendor/animate.min-min.css",
+		"oF": 0,
+		"oS": 3
+		},
+	"/css/vendor/bootstrap.min.css": {
+		"aP": 1,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 0,
+		"oAP": "/css/vendor/bootstrap.min-min.css",
 		"oF": 0,
 		"oS": 3
 		},
@@ -149,7 +167,7 @@
 		},
 	"/images/doc-portrait-1@2x.jpg": {
 		"ft": 16384,
-		"iS": 96784,
+		"iS": 89342,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/images/doc-portrait-1@2x.jpg",
@@ -313,6 +331,17 @@
 		"mi": 1,
 		"oA": 0,
 		"oAP": "/js/app.min-min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 0
+		},
+	"/js/vendor/bootstrap.bundle.min.js": {
+		"bF": 0,
+		"ft": 64,
+		"ma": 0,
+		"mi": 1,
+		"oA": 0,
+		"oAP": "/js/vendor/bootstrap.bundle.min-min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 0

@@ -42,8 +42,8 @@
 
   &:hover {
     color: $color-white;
-    border: 1px solid lighten($color-main, 10);
-    background-color: lighten($color-main, 10);
+    border: 1px solid lighten($color-main, 20);
+    background-color: lighten($color-main, 20);
     text-decoration: none;
   }
 }

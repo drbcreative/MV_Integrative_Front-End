@@ -82,8 +82,12 @@
   background: url('../../images/info-section-bg@2x.jpg') center / cover;
   padding: 40px 20px;
 
+  @include isXLarge {
+    padding: 40px 20px 100px 20px;
+  }
+
   @include isRetina {
-    padding: 40px 20px 80px 20px;
+    padding: 40px 20px 150px 20px;
   }
 
   .containerish {
@@ -103,6 +107,102 @@
     .col-right {
       .section-info {
         text-align: center;
+      }
+    }
+  }
+}
+
+/* about us ***************************************************************** */
+.about-us {
+  background: url('../../images/about-us-bg@2x.jpg') center / cover;
+  padding: 40px 20px;
+
+  @include isXLarge {
+    height: 470px;
+  }
+
+  .containerish {
+    display: grid;
+    row-gap: 2rem;
+    margin-top: -3rem;
+
+    @include isLarge {
+      grid-template-columns: 1.5fr 1fr;
+    }
+
+    @include isXLarge {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .col-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .col-right {
+      position: relative;
+      top: -2rem;
+
+      .about--slider-container {
+
+        .about--slider {
+          .slide {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+              width: 290px;
+              height: auto;
+            }
+
+            .slide-caption {
+              color: $color-white;
+              font-family: $font-secondary;
+              font-size: 1rem;
+              margin: 0;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+}
+
+/* functional health ******************************************************** */
+.functional-health {
+
+  @include isMedium {
+    padding: 20px;
+  }
+
+  @include isRetina {
+    padding: 60px 20px;
+  }
+
+
+  .containerish {
+    background: url('../../images/tip-bg@2x.jpg') center right / cover;
+
+    @include isXLarge {
+      height: 820px;
+    }
+
+    .section-info {
+      background: rgba($color-white, .8);
+      padding: 40px 20px;
+      height: inherit;
+
+      @include isMedium {
+        width: 50%;
+      }
+
+      @include isXLarge {
+        padding: 2rem 3rem;
       }
     }
   }
