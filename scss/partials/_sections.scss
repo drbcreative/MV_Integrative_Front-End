@@ -187,9 +187,63 @@
 
   .containerish {
     background: url('../../images/tip-bg@2x.jpg') center right / cover;
+    position: relative;
 
     @include isXLarge {
       height: 820px;
+    }
+
+    .tip-container {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 683px;
+      height: 380px;
+      display: none;
+
+      @include isXLarge {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .tip--left {
+        .tip--image-container {
+          //code
+        }
+      }
+
+      .tip--right {
+        display: grid;
+        grid-template-rows: 60px 320px;
+
+        .tip--slider-nav {
+          grid-row: 1;
+
+          img {
+            width: 60px;
+            height: 60px;
+            margin: 0;
+            padding: 0;
+          }
+        }
+
+        .tip--info-container {
+          grid-row: 2;
+          background: linear-gradient(90deg, rgba($color-main, .8) 10%, rgba($color-main, 1));
+
+          .tip--slide {
+            padding: 4rem;
+
+            .slide--info {
+              color: $color-white;
+              font-family: $font-secondary;
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+
+
     }
 
     .section-info {
@@ -203,6 +257,115 @@
 
       @include isXLarge {
         padding: 2rem 3rem;
+      }
+
+      @include isRetina {
+        padding: 2rem 4rem;
+      }
+    }
+  }
+}
+
+/* chiropractic ************************************************************* */
+.chiropractic {
+  // padding: 20px 0;
+
+  @include isLarge {
+    padding: 0 20px 0px 20px;
+  }
+
+  @include isXLarge {
+    padding: 0 20px 0 20px;
+  }
+
+  .containerish {
+    display: grid;
+
+    @include isLarge {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0;
+      align-items: center;
+    }
+
+    .col-left {
+      background: url('../../images/chiropratic-img@2x.jpg') center left / cover;
+      min-height: 400px;
+
+      @include isMedium {
+        background-position: bottom left;
+      }
+
+      @include isLarge {
+        height: 440px;
+      }
+
+      @include isXLarge {
+        height: 540px;
+      }
+    }
+
+    .col-right {
+      background: url('../../images/chiropractic-bg@2x.jpg') center / cover;
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+/* aesthetics *************************************************************** */
+.aesthetics {
+  padding: 0;
+
+  @include isLarge {
+    padding: 0 20px 20px 20px;
+  }
+
+  @include isXLarge {
+    padding: 0 20px 0 20px;
+  }
+
+  .containerish {
+    display: grid;
+
+    @include isLarge {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 0;
+      align-items: center;
+    }
+
+    .col-left {
+      background: url('../../images/aesthetics-bg@2x.jpg') center / cover;
+      height: 100%;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+
+      @include isMedium {
+        grid-row: 2;
+      }
+
+      @include isLarge {
+        grid-row: 1;
+      }
+    }
+
+    .col-right {
+      background: url('../../images/aesthetics-img@2x.jpg') center left / cover;
+      min-height: 400px;
+
+      @include isMedium {
+        background-position: bottom left;
+      }
+
+      @include isLarge {
+        height: 440px;
+        grid-column: 2;
+      }
+
+      @include isXLarge {
+        height: 540px;
       }
     }
   }
