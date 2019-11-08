@@ -63,15 +63,15 @@
       }
 
       &.slide-1 {
-        background: url('../../images/hero-slide-1@2x.jpg') center / cover;
+        background: url('../images/hero-slide-1@2x.jpg') center / cover;
       }
 
       &.slide-2 {
-        background: url('../../images/hero-slide-1@2x.jpg') center / cover;
+        background: url('../images/hero-slide-1@2x.jpg') center / cover;
       }
 
       &.slide-3 {
-        background: url('../../images/hero-slide-1@2x.jpg') center / cover;
+        background: url('../images/hero-slide-1@2x.jpg') center / cover;
       }
     }
   }
@@ -79,7 +79,7 @@
 
 /* information ************************************************************** */
 .information {
-  background: url('../../images/info-section-bg@2x.jpg') center / cover;
+  background: url('../images/info-section-bg@2x.jpg') center / cover;
   padding: 40px 20px;
 
   @include isXLarge {
@@ -114,7 +114,7 @@
 
 /* about us ***************************************************************** */
 .about-us {
-  background: url('../../images/about-us-bg@2x.jpg') center / cover;
+  background: url('../images/about-us-bg@2x.jpg') center / cover;
   padding: 40px 20px;
 
   @include isXLarge {
@@ -124,14 +124,17 @@
   .containerish {
     display: grid;
     row-gap: 2rem;
-    margin-top: -3rem;
+
 
     @include isLarge {
       grid-template-columns: 1.5fr 1fr;
+      // margin-top: -3.5rem;
     }
 
     @include isXLarge {
       grid-template-columns: 1fr 1fr;
+      // margin-top: -4rem;
+      overflow: visible;
     }
 
     .col-left {
@@ -141,7 +144,11 @@
 
     .col-right {
       position: relative;
-      top: -2rem;
+      // top: -2rem;
+
+      @include isXLarge {
+        top: -6rem;
+      }
 
       .about--slider-container {
 
@@ -186,7 +193,7 @@
 
 
   .containerish {
-    background: url('../../images/tip-bg@2x.jpg') center right / cover;
+    background: url('../images/tip-bg@2x.jpg') center right / cover;
     position: relative;
 
     @include isXLarge {
@@ -288,7 +295,7 @@
     }
 
     .col-left {
-      background: url('../../images/chiropratic-img@2x.jpg') center left / cover;
+      background: url('../images/chiropratic-img@2x.jpg') center left / cover;
       min-height: 400px;
 
       @include isMedium {
@@ -305,7 +312,7 @@
     }
 
     .col-right {
-      background: url('../../images/chiropractic-bg@2x.jpg') center / cover;
+      background: url('../images/chiropractic-bg@2x.jpg') center / cover;
       height: 100%;
       padding: 20px;
       display: flex;
@@ -336,7 +343,7 @@
     }
 
     .col-left {
-      background: url('../../images/aesthetics-bg@2x.jpg') center / cover;
+      background: url('../images/aesthetics-bg@2x.jpg') center / cover;
       height: 100%;
       padding: 20px;
       display: flex;
@@ -352,7 +359,7 @@
     }
 
     .col-right {
-      background: url('../../images/aesthetics-img@2x.jpg') center left / cover;
+      background: url('../images/aesthetics-img@2x.jpg') center left / cover;
       min-height: 400px;
 
       @include isMedium {
@@ -366,6 +373,83 @@
 
       @include isXLarge {
         height: 540px;
+      }
+    }
+  }
+}
+
+/* visit ******************************************************************** */
+.visit {
+  padding: 20px;
+
+  .containerish {
+    background: url('../images/visit-bg@2x.jpg') center / cover;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+
+    @include isMedium {
+      justify-content: flex-end;
+    }
+
+    .section-info {
+      text-align: center;
+
+      @include isMedium {
+        max-width: 500px;
+      }
+
+      @include isLarge {
+        max-width: 600px;
+        padding: 1rem 0;
+      }
+
+      @include isXLarge {
+        max-width: 700px;
+        padding: 1rem 0;
+      }
+
+      @include isRetina {
+        max-width: 793px;
+        padding: .5rem 0;
+      }
+
+      .ui-btn-white {
+        color: $color-dark;
+
+        @include isMedium {
+          max-width: 250px;
+        }
+      }
+    }
+  }
+}
+
+/* massage therapy ********************************************************** */
+.massage-therapy {
+  .containerish {
+    background: url('../images/massage-therapy-bg@2x.jpg') center / cover;
+
+    @include isLarge {
+      height: 540px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .section-info {
+      background: rgba($color-white, .85);
+      padding: 40px 20px;
+      text-align: center;
+
+      @include isLarge {
+        width: 865px;
+        padding: 4rem;
+      }
+
+      @include isXLarge {
+        width: 865px;
+        padding: 4rem 10rem;
       }
     }
   }

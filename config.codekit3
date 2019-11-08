@@ -230,6 +230,28 @@
 		"opt": 0,
 		"q": 100
 		},
+	"/images/massage-therapy-bg.jpg": {
+		"ft": 16384,
+		"iS": 41520,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/massage-therapy-bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"/images/massage-therapy-bg@2x.jpg": {
+		"ft": 16384,
+		"iS": 119312,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/images/massage-therapy-bg@2x.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"q": 100
+		},
 	"/images/naturopathic-medicine-img@2x.jpg": {
 		"ft": 16384,
 		"iS": 93038,
