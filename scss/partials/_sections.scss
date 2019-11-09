@@ -119,20 +119,27 @@
 
   @include isXLarge {
     height: 470px;
+    padding: 0 3rem;
   }
 
   .containerish {
-    display: grid;
+    height: 100%;
+    // display: grid;
+    // grid-template-columns: minmax(1, 1fr);
     row-gap: 2rem;
 
+    @include isMedium {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+    }
 
     @include isLarge {
-      grid-template-columns: 1.5fr 1fr;
+      grid-template-columns: 1.5fr minmax(0, 1fr);
       // margin-top: -3.5rem;
     }
 
     @include isXLarge {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr minmax(0, 1fr);
       // margin-top: -4rem;
       overflow: visible;
     }
@@ -147,12 +154,87 @@
       // top: -2rem;
 
       @include isXLarge {
-        top: -6rem;
+        top: -3rem;
       }
 
       .about--slider-container {
 
+        .about--slider-nav {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          z-index: 999;
+          cursor: pointer;
+
+          @include isLarge {
+            padding: 0 1rem;
+          }
+
+          @include isXLarge {
+            padding: 0 4rem;
+          }
+
+          @include isGiant {
+            padding: 0 8rem;
+          }
+
+          img {
+            width: 25.2px;
+            height: 36.8px;
+          }
+        }
+
         .about--slider {
+
+          .slick-dots {
+            // background: red;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: -20px;
+            list-style: none;
+            display: block;
+            text-align: center;
+            padding: 0;
+            margin: 0;
+
+            @include isXLarge {
+              bottom: -50px;
+            }
+          }
+
+          .slick-dots li button::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            // content: "•";
+            width: 20px;
+            height: 20px;
+            font-family: "slick";
+            font-size: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: transparent;
+            border: 1px solid $color-main;
+            border-radius: 50%;
+            opacity: 1;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+          }
+
+          .slick-dots li.slick-active button::before {
+            color: $color-main;
+            opacity: 1;
+            border: none;
+          }
+
+          .slick-track {
+            width: 100vw;
+          }
+
           .slide {
             display: flex;
             flex-direction: column;
@@ -210,7 +292,7 @@
 
       @include isXLarge {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr minmax(0, 1fr);
       }
 
       .tip--left {
@@ -220,8 +302,10 @@
       }
 
       .tip--right {
+        // background: red;
+        grid-column: 2;
         display: grid;
-        grid-template-rows: 60px 320px;
+        grid-template-rows: 60px minmax(0, 320px);
 
         .tip--slider-nav {
           grid-row: 1;
@@ -243,8 +327,9 @@
 
             .slide--info {
               color: $color-white;
-              font-family: $font-secondary;
+              font-family: $font-primary;
               font-size: 1rem;
+              max-width: 240px;
             }
           }
         }
@@ -317,6 +402,10 @@
       padding: 20px;
       display: flex;
       align-items: center;
+
+      @include isRetina {
+        padding: 0 2rem;
+      }
     }
   }
 }
@@ -355,6 +444,10 @@
 
       @include isLarge {
         grid-row: 1;
+      }
+
+      @include isRetina {
+        padding: 0 2rem;
       }
     }
 
@@ -395,6 +488,10 @@
     .section-info {
       text-align: center;
 
+      p {
+        line-height: 2rem;
+      }
+
       @include isMedium {
         max-width: 500px;
       }
@@ -410,7 +507,7 @@
       }
 
       @include isRetina {
-        max-width: 793px;
+        max-width: 720px;
         padding: .5rem 0;
       }
 

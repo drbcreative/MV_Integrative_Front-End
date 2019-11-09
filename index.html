@@ -32,7 +32,7 @@
         </a>
       </div>
       <div class="col-middle">
-        <p class="topbar-lead-copy color-dark">
+        <p class="topbar-lead-copy color-dark-accent">
           Refer a friend and you will BOTH receive $25 off your next appointment!
         </p>
       </div>
@@ -228,10 +228,22 @@
         </div>
         <div class="col-right">
           <div class="about--slider-container">
+            <div class="about--slider-nav">
+              <img src="images/arrow-left.svg" alt="" class="about--slider-nav-arrow-left">
+              <img src="images/arrow-right.svg" alt="" class="about--slider-nav-arrow-right">
+            </div>
             <div class="about--slider">
               <div class="slide">
                 <img src="images/doc-portrait-1@2x.jpg" alt="">
                 <p class="slide-caption">Pierre Johnson, MD</p>
+              </div>
+              <div class="slide">
+                <img src="images/doc-portrait-1@2x.jpg" alt="">
+                <p class="slide-caption">Magic Johnson, MD</p>
+              </div>
+              <div class="slide">
+                <img src="images/doc-portrait-1@2x.jpg" alt="">
+                <p class="slide-caption">Don Johnson, MD</p>
               </div>
             </div>
           </div>
@@ -260,6 +272,12 @@
                   services provide comprehensive food guides based on your specific metabolic needs.
                 </p>
               </div>
+              <!-- <div class="tip--slide">
+                <p class="slide--info">
+                  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Placeat odit maxime, quidem est corporis
+                  unde. Possimus excepturi consectetur ut nesciunt tenetur nisi, ea eaque illo, aut rerum non est illum?
+                </p>
+              </div> -->
             </div>
           </div>
         </div>
@@ -335,7 +353,7 @@
       <div class="containerish">
         <div class="section-info">
           <h2 class="color-dark">Visit Our <br class="d-md-none"> Sister Site</h2>
-          <p class="body-copy color-dark mt-3 mb-4 is-italic">
+          <p class="body-copy color-dark mt-3 mb-4 is-italic is-bold">
             For further help with your wellness goals, visit ReviveAK. Our sister site offers TempSure, SculpSure and
             other aesthetic treatments designed to bring your body and mind into a state of full synchrony.
           </p>
@@ -351,10 +369,11 @@
         <div class="section-info">
           <h2 class="color-dark">MASSAGE THERAPY</h2>
           <p class="body-copy color-dark mt-3 mb-4 is-italic">
-            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet
-            clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet,
-            consetetur.
+            High stress levels often serve to disrupt our quality of life. At MV Integrative, we’re dedicated to
+            optimizing your
+            health and facilitating your wellness goals. Our philosophy is full body synchrony, as such we believe that
+            relaxation
+            through massage therapy can improve not only physical, but emotional and mental health as well.
           </p>
           <div class="ui-btn-group">
             <a href="#" class="ui-btn ui-btn-main">LEARN MORE</a>
@@ -433,11 +452,22 @@
         nextArrow: $('.hero--slider-nav-arrow-right')
       });
       /* about us slider */
+      $('.about--slider').slick({
+        autoplay: true,
+        slidesToShow: 1,
+        slideToScroll: 1,
+        infinite: true,
+        dots: true,
+        prevArrow: $('.about--slider-nav-arrow-left'),
+        nextArrow: $('.about--slider-nav-arrow-right')
+      });
       // $('.tip--info-container').slick({
-      //   dots: true,
+      //   autoplay: true,
       //   arrows: false,
-      //   autoplay: true
-      // });
+      //   slidesToShow: 1,
+      //   slideToScroll: 1,
+      //   infinite: true
+      // })
     });
   </script>
 </body>
